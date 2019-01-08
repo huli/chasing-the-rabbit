@@ -13,7 +13,7 @@ channel.queue_declare(queue='hello')
 channel.basic_publish(exchange='',
                         routing_key='hello',
                         body='Hello World!')
-print(" [x] sent 'Hello World!'")
+print(" [x] Sent 'Hello World!'")
 
 # Make shure network buffers are flushed and our message is delivered
 connection.close()
