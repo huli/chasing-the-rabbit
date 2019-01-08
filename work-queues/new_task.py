@@ -8,7 +8,7 @@ connection = pika.BlockingConnection(pika.ConnectionParameters(host='127.0.0.1',
 channel = connection.channel()
 
 # Create a queue
-channel.queue_declare(queue='hello', durable=True)
+channel.queue_declare(queue='task_queue', durable=True)
 
 
 message = ' '.join(sys.argv[1:]) or "Hello World!"
